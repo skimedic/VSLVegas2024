@@ -7,7 +7,8 @@
 
 namespace AutoLot.Dal.Repos.Base;
 
-public abstract class BaseRepo<T>(ApplicationDbContext context) : BaseViewRepo<T>(context), IBaseRepo<T>
+public abstract class BaseRepo<T>(ApplicationDbContext context) : 
+    BaseViewRepo<T>(context), IBaseRepo<T>
     where T : BaseEntity, new()
 {
     protected BaseRepo(DbContextOptions<ApplicationDbContext> options)
